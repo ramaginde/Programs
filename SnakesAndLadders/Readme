@@ -1,0 +1,44 @@
+This program is written to depict the game of snakes and ladders.
+
+Characters of the game will be "n" number of players and there will be "n" number of snakes and "n" number of ladders and "n" number of squares.
+
+There will be only one winner of the game. The player that crosses the last (highest value square) on the game board will be declared as the winner.
+
+There are certain assumptions made while writing the program to create the game
+
+1)The foot of the ladder is always less than the top of the ladder.
+2)The mouth of the snake will always be greater than the tail of the snake.
+3)The value of foot/top of ladder and mouth/tail of snake cannot be more than the total number of squares finalized to create the playing board.
+
+Based on the above assumptions there are validations done before starting the game.
+
+Major Classes and files used:
+Package: com.rama.game.snakesandladders
+
+1) SnakesAndLadders.java : This class is the starting point of the game. This contains the validations that would be done to 
+                           avoid wrong inputs while creating the playing board and playing the game.
+						   This class will take the inputs from the user for number of players, number of squares and name of the players that will play the game.
+2) Game.java : This class will contains the actual logic for creating the playing board using the values and play the game. It will internally call other classes to support the logic for playing the game.
+
+3) snakes.properties : This property file is used to read the values for placing the snakes on the playing board. The values are name and value pair where name is the mouth of the snake and value is the tail
+                       and name is always greater than the value.
+                       
+4) ladder.properties : This property file is used to read the values for placing the ladders on the playing board. The values are name and value pair where name is the foot of the ladder and value is the top
+                       and name is always less than the value.
+                       
+Note: If the number of snakes or ladders has to be changed then the respective property file will have to be modified to enter or remove a name and value pair
+
+
+Unit test:
+Package: com.rama.game.test
+
+1) GameTest.java : This unit is test written for verifying the play() logic of the Game.java class. 
+
+
+Note: In the test the values of the number of players, name of the players, number of squares and the snakes and ladders values are hard coded based on the assignment values.
+If the user wants to execute the test with different values then these have to be changed in the GameTest.java class.
+                   
+                   
+                   
+                       
+
